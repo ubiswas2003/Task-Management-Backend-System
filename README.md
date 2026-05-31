@@ -1,56 +1,9 @@
-# Task Management REST API
-This is a back-end code repository.  The front-end code repository can be found here: [https://github.com/pgmorgan/task-manager-api-frontend](https://github.com/pgmorgan/task-manager-api-frontend).
+# Task Management Backend System
 
-This is a full featured Task Management REST API back-end built with Node.js and MongoDB.  Features include:
+Task Management Backend System is a backend application developed using Node.js, Express.js, and MongoDB to streamline task creation, tracking, and management through secure RESTful APIs. The project focuses on implementing core backend development concepts such as authentication, database design, validation, error handling, and workflow management. It enables users to securely manage tasks while providing a scalable and maintainable architecture suitable for real-world applications.
 
-- Pagination and filtering of server responses to avoid slow page load times.
-- Full CRUD features for User and Task instances.
-- Hash encryption of passwords and access management with JWT tokens.  
-- Restricted user access to CRUD operations based on JWT tokens.
+The application incorporates JWT-based authentication to ensure secure access to protected resources and uses MongoDB with Mongoose for efficient data storage and retrieval. Users can create, update, retrieve, and delete tasks, while advanced features such as filtering, sorting, and pagination enhance data accessibility and overall API performance. Validation mechanisms and centralized error handling have been implemented to improve reliability and maintain data integrity across the application.
 
-### SETUP INSTRUCTIONS
+The backend follows RESTful architectural principles and emphasizes modular code organization, making it easier to maintain and extend. Through this project, key backend engineering concepts including API development, authentication and authorization, database schema design, middleware implementation, request validation, and performance optimization were applied to build a robust and scalable system.
 
-To use this code you will require an account with [SendGrid](https://signup.sendgrid.com/).  Sign-up is free and no credit card is required to access a free-tier API Key.
-
-Node.js version 12+ and npm must be installed on your machine.  In terminal type the following commands:
-```
-git clone https://github.com/pgmorgan/task-manager-api.git
-cd task-manger-api
-sudo npm install
-mkdir config
-cd config
-touch dev.env
-vim dev.env
-```
-
-Insert the following lines in `dev.env`, replacing all `<content>` with your own information:
-
-```
-PORT=<port number>
-SGMAIL_EMAIL=<your email address>
-MONGODB_URL=<mongodb connection string>
-SENDGRID_API_KEY=<api key>
-JWT_SECRET=<unique key of your choice to generate JSON web tokens>
-```
-
-To run the web server return to the root of the repository and type:
-```
-npm run dev
-```
-Alternatively you may name `config/prod.env` or `config/staging.env` and appropriately run the web server with `npm run prod` or `npm run staging`.
-
-### API USAGE
-
-A front-end has been developed for this REST API with Vue.js.  The Front-end code repository can be found here: [https://github.com/pgmorgan/task-manager-api-frontend](https://github.com/pgmorgan/task-manager-api-frontend).  Also, all HTTP requests can be made from software such as [Postman](www.getpostman.com).  Postman is free and exists for all major operating systems.
-
-For feedback or inquiries please contact Peter at petergm@gmail.com
-
-### FRONTEND SCREENSHOTS
-
-##### Screenshot #1
-
-![Screenshot of Task Tracker](img/Screenshot-TaskTracker-App.png?raw=true "Screenshot of TaskTracker App")
-
-##### Screenshot #2
-	
-![Screenshot of Task Tracker](img/Screenshot-TaskTracker-App-2.png?raw=true "Screenshot of TaskTracker App")
+This project strengthened my understanding of backend development by providing hands-on experience with secure API design, MongoDB data modeling, middleware-based request processing, and scalable application architecture. Future enhancements may include role-based access control, activity tracking, deadline management, email notifications, automated testing, and containerized deployment.
